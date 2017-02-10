@@ -11,7 +11,6 @@ public class BankArrays {
         Scanner in = new Scanner(System.in);
         System.out.print("Input Name: ");
         String ownerName = in.nextLine();
-        //  System.out.println("Name not found");
         System.out.print("Input withdrawal: ");
         double withdrawal = in.nextDouble();
         for ( int i=0; i < ownerNames.length; i++)
@@ -22,9 +21,7 @@ public class BankArrays {
                   System.out.println(ownerNames[i] + "   Withdrawal: " + withdrawal + "   Balance: " + balances[i]);
                 }
                   else System.out.println(ownerNames[i] + "  NO ");
-        }
-     //else System.out.println(ownerNames[i] + "  NO ");
-
-    }
+        }   else if (i==0) System.out.println("Name not found");
+     }
 
 }
