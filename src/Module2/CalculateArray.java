@@ -4,9 +4,9 @@ public class CalculateArray {
 
     public static void main(String[] args) {
 
-        int[] array = {-500, 9000, 7500, -234, 4534, 9985, 100, 3443, -5000, 4600};
-        double[] array2 = {500.5, -9000.7, -7500, 234.89, -4534.987, 9985.01, 100, -3443.234, 5000.98, 460.007};
-        int[] array3 = {-500, -9000, -7500, -234, -4534, -9985, 100, -3443, -5000, -4600};
+        int[] array = {-5, 90, 750, -234, 45, 99, 1, 34, -5, 46};
+        double[] array2 = {5.5, -9.7, -75, 234.89, -45.987, 9985.01, 10, -34.234, 5.98, 46.007};
+        int[] array3 = {-500, -9000, -7500, -234, -4534, -9985, -100, -3443, -5000, -4600};
         double[] array4 = {-500.5, -9000.7, -7500, -234.89, -4534.987, -9985.01, -100, -3443.234, -5000.98, 460.007};
         sum(array);
         sum(array2);
@@ -16,6 +16,8 @@ public class CalculateArray {
         max(array2);
         maxPositive(array3);
         maxPositive(array4);
+        multiplication(array);
+        multiplication(array2);
     }
 
 
@@ -26,9 +28,8 @@ public class CalculateArray {
             sum += array[i];
         }
           System.out.println("sum array = " + sum);
-       // return sum;
-
     }
+
     private static void sum(double[] array2) {
         int sum = 0;
 
@@ -36,8 +37,6 @@ public class CalculateArray {
             sum += array2[i];
         }
         System.out.println("sum array2 = " + sum);
-        // return sum;
-
     }
 
     private static void min(int[] array) {
@@ -53,10 +52,8 @@ public class CalculateArray {
 
         }
         System.out.println("min " + "array[" + index + "] = " + min);
-        // return min;
-
-
     }
+
     private static void min(double[] array2) {
 
         double min = array2[0];
@@ -130,5 +127,23 @@ public class CalculateArray {
         }
         if (maxpositive > 0) {System.out.println("maxpositive " + "array4[" + index + "] = " + maxpositive);}
         else System.out.println("Позитивных чисел нет");
+    }
+
+    private static void multiplication(int[] array) {
+        long multiplication = 1;
+
+        for (int i = 0; i < array.length; i++) {
+            multiplication *= array[i];
+        }
+        System.out.println("multiplication array = " + multiplication);
+    }
+
+    private static void multiplication(double[] array2) {
+        double multiplication = 1;
+
+        for (int i = 0; i < array2.length; i++) {
+            multiplication *= array2[i];
+        }
+        System.out.println("multiplication array2 = " + multiplication);
     }
 }
