@@ -13,15 +13,16 @@ public class BankArrays {
         String ownerName = in.nextLine();
         System.out.print("Input withdrawal: ");
         double withdrawal = in.nextDouble();
+        boolean ifNotFound = false;
         for ( int i=0; i < ownerNames.length; i++)
             if (ownerName.equals (ownerNames[i])){
                 if (withdrawal*1.05 <= balances[i]) {
+                    ifNotFound = true;
                     balances[i] -= withdrawal * 1.05;
-
-                  System.out.println(ownerNames[i] + "   Withdrawal: " + withdrawal + "   Balance: " + balances[i]);
+                    System.out.println(ownerNames[i] + "   Withdrawal: " + withdrawal + "   Balance: " + balances[i]);
                 }
-                  else System.out.println(ownerNames[i] + "  NO ");
-        }   else if (i==0) System.out.println("Name not found");
+                  else ifNotFound = true; System.out.println(ownerNames[i] + "  NO ");
+        }if (ifNotFound==false) System.out.println("Name not found");
      }
 
 }
