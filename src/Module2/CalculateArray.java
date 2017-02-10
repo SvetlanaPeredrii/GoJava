@@ -6,8 +6,8 @@ public class CalculateArray {
 
         int[] array = {-500, 9000, 7500, -234, 4534, 9985, 100, 3443, -5000, 4600};
         double[] array2 = {500.5, -9000.7, -7500, 234.89, -4534.987, 9985.01, 100, -3443.234, 5000.98, 460.007};
-        int[] array3 = {-500, -9000, -7500, -234, -4534, -9985, -100, -3443, -5000, -4600};
-        double[] array4 = {-500.5, -9000.7, -7500, -234.89, -4534.987, -9985.01, -100, -3443.234, -5000.98, -460.007};
+        int[] array3 = {-500, -9000, -7500, -234, -4534, -9985, 100, -3443, -5000, -4600};
+        double[] array4 = {-500.5, -9000.7, -7500, -234.89, -4534.987, -9985.01, -100, -3443.234, -5000.98, 460.007};
         sum(array);
         sum(array2);
         min(array);
@@ -72,18 +72,19 @@ public class CalculateArray {
         System.out.println("min " + "array2[" + index + "] = " + min);
 
     }
-    private static void maxPositive(int[] array3) {
+    private static void max(int[] array) {
 
+        int max = array[0];
         int index = 0;
-        int maxpositive = -1;
-        for (int i = 0; i < array3.length; i++) {
-            if (array3[i] > 0 && maxpositive < array3[i]) {
-                maxpositive = array3[i];
+
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
                 index=i;
             }
+
         }
-        if (maxpositive > 0) {System.out.println("maxpositive " + "array3[" + index + "] = " + maxpositive);}
-        else System.out.println("Позитивных чисел нет");
+        System.out.println("max " + "array[" + index + "] = " + max);
 
     }
     private static void max(double[] array2) {
@@ -101,34 +102,33 @@ public class CalculateArray {
         System.out.println("max " + "array2[" + index + "] = " + max);
 
     }
-    private static void max(int[] array) {
 
-        int max = array[0];
+    private static void maxPositive(int[] array3) {
+
         int index = 0;
-
-        for (int i = 1; i < array.length; i++) {
-            if (max < array[i]) {
-                max = array[i];
+        int maxpositive = -1;
+        for (int i = 0; i < array3.length; i++) {
+            if (array3[i] > 0 && maxpositive < array3[i]) {
+                maxpositive = array3[i];
                 index=i;
             }
-
         }
-        System.out.println("max " + "array[" + index + "] = " + max);
+        if (maxpositive > 0) {System.out.println("maxpositive " + "array3[" + index + "] = " + maxpositive);}
+        else System.out.println("Позитивных чисел нет");
 
     }
-    private static void maxPositive(double[] array2) {
 
-        double max = array2[0];
+    private static void maxPositive(double[] array4) {
+
         int index = 0;
-
-        for (int i = 1; i < array2.length; i++) {
-            if (max < array2[i]) {
-                max = array2[i];
+        double maxpositive = -1;
+        for (int i = 0; i < array4.length; i++) {
+            if (array4[i] > 0 && maxpositive < array4[i]) {
+                maxpositive = array4[i];
                 index=i;
             }
-
         }
-        System.out.println("max " + "array2[" + index + "] = " + max);
-
+        if (maxpositive > 0) {System.out.println("maxpositive " + "array4[" + index + "] = " + maxpositive);}
+        else System.out.println("Позитивных чисел нет");
     }
 }
