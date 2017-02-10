@@ -12,8 +12,8 @@ public class Bank {
         double withdrawal = in.nextDouble();
         if (withdrawal*1.05 <= balance){
             balance -= withdrawal * 1.05;
-            withdrawal = withdrawal * 0.05;
-        System.out.println("OK " + "   Withdrawal: " + withdrawal + "   Balance: " + balance);}
+            double commission = withdrawal * 0.05;
+        System.out.println("OK " + "   Commission: " + commission + "   Balance: " + balance);}
         else System.out.println("NO ");
 
     }

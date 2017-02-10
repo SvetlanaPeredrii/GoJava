@@ -5,7 +5,7 @@ public class CalculateArray {
     public static void main(String[] args) {
 
         int[] array = {-5, 90, 0, -234, 45, 99, 1, 34, -5, 46};
-        double[] array2 = {5.5, -9.7, -75, 234.89, -45.987, 9985.01, 2, -34.234, -5.98, 46.007};
+        double[] array2 = {555.5, -9.7, -75, 234.89, -45.987, 9985.01, 2, -34.234, -5.98, 46.007};
         int[] array3 = {-500, -9000, -7500, -234, -4534, -9985, -100, -3443, -5000, -4600};
         double[] array4 = {-500.5, -9000.7, -7500, -234.89, -4534.987, -9985.01, -100, -3443.234, -5000.98, 460.007};
         sum(array);
@@ -193,6 +193,7 @@ public class CalculateArray {
             }
             else if (secondlargest < array2[i])  {
                 secondlargest = array2[i];
+
             }
         }
         System.out.println("secondLargest " + "array2 = " + secondlargest);
