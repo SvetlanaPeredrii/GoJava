@@ -16,7 +16,7 @@ public class BankArrays {
         boolean ifNotFound = false;
         for ( int i=0; i < ownerNames.length; i++)
             if (ownerName.equals (ownerNames[i])){
-                if (withdrawal*1.05 <= balances[i]) {
+                if (withdrawal*1.05 <= balances[i] && withdrawal>=0 ) {
                     ifNotFound = true;
                     balances[i] -= withdrawal * 1.05;
                     System.out.println(ownerNames[i] + "   Withdrawal: " + withdrawal + "   Balance: " + balances[i]);
