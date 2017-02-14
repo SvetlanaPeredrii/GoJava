@@ -21,8 +21,9 @@ public class BankArrays {
                     balances[i] -= withdrawal * 1.05;
                     System.out.println(ownerNames[i] + "   Withdrawal: " + withdrawal + "   Balance: " + balances[i]);
                 }
-                  else ifNotFound = true; System.out.println(ownerNames[i] + "  NO ");
-        }if (ifNotFound==false) System.out.println("Name not found");
+                  else System.out.println(ownerNames[i] + "  NO ");
+                ifNotFound = true;
+            }if (ifNotFound==false) System.out.println("Name not found");
      }
 
 }
