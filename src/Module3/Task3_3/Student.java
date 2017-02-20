@@ -12,7 +12,7 @@ public class Student {
     Student (String firstName, String lastName, int group){
 
     }
-    Student(String firstName, String lastName, int group, int hourseDuration, String name, String teacherName){
+    Student(String lastName, Course [] coursesTaken){
 
     }
 }
