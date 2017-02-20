@@ -6,9 +6,7 @@ package Module3;
 public class Adder extends Arithmetic {
 
    boolean check(Integer a, Integer b){
-       boolean check;
-     if (a>=b) {check = true;}
-      else check = false;
-     return check;
+         
+     return a>=b;
    }
 }
