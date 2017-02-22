@@ -6,6 +6,7 @@ package Module3.Task3_3;
 public class SpecialStudent extends CollegeStudent {
     long secretKey;
     String email;
+    
     SpecialStudent (String firstName, String lastName, int group){
 
     }

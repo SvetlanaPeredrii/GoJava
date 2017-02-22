@@ -9,10 +9,15 @@ public class Student {
     private int group;
     private Course[] coursesTaken;
     private int age;
+
     Student (String firstName, String lastName, int group){
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.group = group;
 
     }
     Student(String lastName, Course [] coursesTaken){
-
+       this.lastName = lastName;
+       this.coursesTaken = coursesTaken;
     }
 }
