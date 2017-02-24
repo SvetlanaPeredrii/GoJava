@@ -22,4 +22,26 @@ public class Course {
         this.teacherName = teacherName;
 
     }
+
+
+    public Date getstartDate() {
+        return startDate;
+    }
+
+    public void setname(String name) {
+        this.name = name;
+    }
+
+    public String getname() {
+
+        return "Name = " + name;
+    }
+
+    public int getHoursDuration() {
+        return hoursDuration;
+    }
+
+    public String getTeacherName() {
+        return "TeacherName = " + teacherName;
+    }
 }
