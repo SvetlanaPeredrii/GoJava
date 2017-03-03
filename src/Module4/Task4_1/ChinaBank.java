@@ -2,7 +2,7 @@ package Module4.Task4_1;
 
 import Module4.Task4_1.Bank;
 
-import java.util.Currency;
+
 
 /**
  * Created by kaganets.s on 28.02.2017.
@@ -10,6 +10,10 @@ import java.util.Currency;
 public class ChinaBank extends Bank {
     ChinaBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
+    }
+
+    public ChinaBank() {
+        super();
     }
 
     @Override

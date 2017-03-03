@@ -1,6 +1,6 @@
 package Module4.Task4_1;
 
-import java.util.Currency;
+
 
 /**
  * Created by kaganets.s on 28.02.2017.
@@ -22,6 +22,10 @@ public abstract class Bank {
         this.avrSalaryOfEmployee = avrSalaryOfEmployee;
         this.rating = rating;
         this.totalCapital = totalCapital;
+    }
+
+    public Bank() {
+
     }
 
     public long getId() {

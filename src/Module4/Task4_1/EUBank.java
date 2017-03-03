@@ -1,7 +1,7 @@
 package Module4.Task4_1;
 
 
-import java.util.Currency;
+
 
 /**
  * Created by kaganets.s on 28.02.2017.
@@ -14,6 +14,7 @@ public class EUBank extends Bank {
 
     @Override
     int getLimitOfWithdrawal() {
+
         return 0;
     }
 
