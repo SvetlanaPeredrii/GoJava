@@ -87,6 +87,21 @@ public class User {
         this.bank = bank;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                ", monthsOfEmployment=" + monthsOfEmployment +
+                ", companyName='" + companyName + '\'' +
+                ", salary=" + salary +
+                ", bank=" + bank +
+                '}';
+    }
+
+
+
     public static void main(String[] args) {
 
         USBank user1 = new USBank(12312, "cghh", EUR, 3, 25000, 2323,12);
@@ -109,6 +124,7 @@ public class User {
         user2.getBank();
         System.out.println("Bank= "+user2.getBank());
        // System.out.println("Limit= "+ user2.getLimitOfWithdrawal());
+
 
     }
 
