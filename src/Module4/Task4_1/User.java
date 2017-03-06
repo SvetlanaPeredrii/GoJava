@@ -1,9 +1,6 @@
 package Module4.Task4_1;
 
 
-import static Module4.Task4_1.Currency.*;
-
-
 
 /**
  * Created by kaganets.s on 01.03.2017.
@@ -98,34 +95,6 @@ public class User {
                 ", salary=" + salary +
                 ", bank=" + bank +
                 '}';
-    }
-
-
-
-    public static void main(String[] args) {
-
-        USBank user1 = new USBank(12312, "cghh", EUR, 3, 25000, 2323,12);
-
-        System.out.println("Limit= "+ user1.getLimitOfWithdrawal());
-        System.out.println("Funding= "+ user1.getLimitOfFunding());
-        System.out.println("Commission= "+ user1.getCommission( 1000));
-
-      Bank bank = new USBank();
-      Currency currency = USD;
-
-        User user2 = new User(123, "Vasya", 123456.56, 6, "Apple", 2000, bank);
-
-        user2.setBank(new USBank());
-        user2.getBank().setCurrency(USD);
-
-        System.out.println("Limit= "+ user2.getBank().getLimitOfWithdrawal());
-
-       // user2.setBank(new ChinaBank());
-        user2.getBank();
-        System.out.println("Bank= "+user2.getBank());
-       // System.out.println("Limit= "+ user2.getLimitOfWithdrawal());
-
-
     }
 
 
