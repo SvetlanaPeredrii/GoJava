@@ -14,6 +14,7 @@ public class USBank extends Bank {
 
     public USBank() {
         super();
+
     }
 
 
@@ -32,17 +33,37 @@ public class USBank extends Bank {
     }
 
     @Override
-    int getLimitOfFunding() {
-        return 0;
+    public int getLimitOfFunding() {
+
+        int limitOfFunding;
+
+        if (getCurrency() == Currency.EUR){
+            limitOfFunding = 10000;
+        }else limitOfFunding = Integer.MAX_VALUE;
+
+        return limitOfFunding;
     }
 
     @Override
-    int getMonthlyRate() {
-        return 0;
+    public int getMonthlyRate() {
+        int monthlyRate;
+        if (getCurrency() == Currency.USD){
+            monthlyRate=1;
+        }else monthlyRate = 2;
+        return monthlyRate;
     }
 
     @Override
-    int getCommission(int summ) {
-        return 0;
+    public int getCommission(int summ) {
+        int commission;
+        if (getCurrency() == Currency.USD && summ<=1000){
+            commission=5;
+        }else  if (getCurrency() == Currency.USD && summ>1000) {
+            commission = 7;
+        }else if (getCurrency() == Currency.EUR && summ<=1000){
+            commission=6;
+        }else
+            commission = 8;
+        return commission;
     }
 }
