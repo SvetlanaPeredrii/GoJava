@@ -1,6 +1,7 @@
 package module5;
 
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -14,11 +15,22 @@ public class Main {
         Room room2 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine" );
 Room room3 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
         API.BookingComAPI a = new API.BookingComAPI();
-      
+        System.out.println(a.getClass().getName());
+        a.findRooms(100,5,"Ukraine","Hayat2");
+
+        for(int i = 0; i <= a.getRooms().length  - 1; i++) {
+            System.out.print(a.getRooms()[i].getId() + "  ");
+
+        }
 
 
-        System.out.println("room equals room2 "+ room.equals(room2));
-        System.out.println("room hashCode room2 "+ (room.hashCode() == room2.hashCode()));
+
+
+
+
+
+        System.out.println("room equals room2= "+ room.equals(room2));
+        System.out.println("room hashCode room2= "+ (room.hashCode() == room2.hashCode()));
 
     }
 }
