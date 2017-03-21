@@ -34,8 +34,8 @@ public class Main {
 
         System.out.println("find = "+b.findById(111));
         b.update(room);
-        b.save(room2);
-        b.delete(room3);
+        b.save(room4);
+        b.delete(room5);
 
 
 
