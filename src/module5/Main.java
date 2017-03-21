@@ -19,13 +19,15 @@ public class Main {
 
         API.BookingComAPI a = new API.BookingComAPI();
 
+        System.out.println("Find room BookingComAPI = "+a.findRooms(100,10,"Ukraine","Hayat"));
 
-        System.out.println("Find room = "+a.findRooms(100,5,"Ukraine","Hayat2"));
+        API.GoogleAPI c = new API.GoogleAPI();
 
-//        for(int i = 0; i <= a.getRooms().length  - 1; i++) {
-//            System.out.print(a.getRooms()[i].getId() + "  ");
-//
-//        }
+        System.out.println("Find room GoogleAPI = "+c.findRooms(250,5,"Ukraine","Hayat2"));
+
+        API.TripAdvisorAPI d = new API.TripAdvisorAPI();
+
+        System.out.println("Find room TripAdvisorAPI = "+d.findRooms(100,5,"Ukraine","Hayat4"));
 
 
         DAO.DAOImpl b = new DAO.DAOImpl();
