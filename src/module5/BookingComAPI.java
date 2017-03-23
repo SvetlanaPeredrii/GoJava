@@ -33,9 +33,7 @@ class BookingComAPI implements API {
 
     @Override
     public String toString() {
-        return "BookingComAPI{" +
-                "rooms=" + Arrays.toString(rooms) +
-                '}';
+        return "BookingComAPI= " ;
     }
 
     @Override
@@ -51,7 +49,7 @@ class BookingComAPI implements API {
             }
 
         }
-        System.out.println("BookingComAPI = "+Arrays.toString(array));
+        //System.out.println("BookingComAPI = "+Arrays.toString(array));
         return array;
     }
 }

@@ -17,31 +17,43 @@ public class Controller {
 
         apis = new API[]{api1,api2,api3};
 
-//        apis[0] = new GoogleAPI();
-//        apis[1] = new TripAdvisorAPI();
-//        apis[2] = new BookingComAPI();
-
+//
     }
 
     public Room[] requstRooms(int price, int persons, String city, String hotel) {
 
-        Room[] request = new Room[2];
+        Room[] request = new Room[15];
 
         for (int i = 0; i <= apis.length - 1; i++) {
 
-            System.out.println("Contr= " + Arrays.toString(apis[i].findRooms(price, persons, city, hotel)));
+           // System.out.println("Contr= " + Arrays.toString(apis[i].findRooms(price, persons, city, hotel)));
+            //request=apis[i].findRooms(price, persons, city, hotel);
+            System.out.println("Controller - "+apis[i]+Arrays.toString(request=apis[i].findRooms(price, persons, city, hotel)));
 
         }
         return request;
 
     }
 
-    public Room[] check(API api1, API api2) {
+    public Room[] check(API a1, API a2) {
 
-     //api1.findRooms()==api2.findRooms();
+        Room[] check = new Room[6];
 
 
-        return new Room[0];
+        for (int i = 0; i <= apis.length - 1; i++) {
+            for (int j = 0; i <= check.length - 1; j++) {
+
+                check = a1.findRooms(100, 5, "Ukraine", "Hayat");
+              
+
+                System.out.println("Check= " + Arrays.toString(check));
+                System.out.println("dlina= " + check.length);
+                System.out.println("i= " + check[j] + "nom= " + j);
+
+
+            }
+        }
+        return check;
     }
 
 

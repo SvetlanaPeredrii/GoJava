@@ -8,6 +8,7 @@ import java.util.Date;
  */
 class GoogleAPI implements API{
 
+
     Room[] rooms;
 
 
@@ -19,6 +20,10 @@ class GoogleAPI implements API{
         Room room4 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
         Room room5 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
         rooms = new Room[]{room, room2, room3, room4, room5};
+    }
+
+    public Room[] getRooms() {
+        return rooms;
     }
 
     @Override
@@ -34,7 +39,12 @@ class GoogleAPI implements API{
             }
 
         }
-        System.out.println("GoogleAPI = "+ Arrays.toString(array));
+       // System.out.println("GoogleAPI = "+ Arrays.toString(array));
         return array;
+    }
+
+    @Override
+    public String toString() {
+        return "GoogleAPI= ";
     }
 }

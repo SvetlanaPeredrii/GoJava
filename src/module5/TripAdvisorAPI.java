@@ -8,6 +8,8 @@ import java.util.Date;
  */
 class TripAdvisorAPI implements API{
 
+
+
     Room[] rooms;
 
     public TripAdvisorAPI() {
@@ -20,7 +22,9 @@ class TripAdvisorAPI implements API{
 
     }
 
-
+    public Room[] getRooms() {
+        return rooms;
+    }
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
@@ -36,9 +40,14 @@ class TripAdvisorAPI implements API{
             }
 
         }
-        System.out.println("TripAdvisorAPI = "+ Arrays.toString(array));
+        //System.out.println("TripAdvisorAPI = "+ Arrays.toString(array));
         return array;
 
 
+    }
+
+    @Override
+    public String toString() {
+        return "TripAdvisorAPI= ";
     }
 }
