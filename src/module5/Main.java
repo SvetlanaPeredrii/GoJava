@@ -41,7 +41,8 @@ public class Main {
         Controller controller = new Controller();
 
       controller.requstRooms(100,10,"Ukraine","Hayat");
-      //controller.check(new TripAdvisorAPI(),new GoogleAPI());
+        System.out.println("test= "+Arrays.toString(controller.check(new TripAdvisorAPI(),new GoogleAPI())));
+
 
 
 

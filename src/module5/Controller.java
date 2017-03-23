@@ -17,7 +17,7 @@ public class Controller {
 
         apis = new API[]{api1,api2,api3};
 
-//
+
     }
 
     public Room[] requstRooms(int price, int persons, String city, String hotel) {
@@ -26,9 +26,7 @@ public class Controller {
 
         for (int i = 0; i <= apis.length - 1; i++) {
 
-           // System.out.println("Contr= " + Arrays.toString(apis[i].findRooms(price, persons, city, hotel)));
-            //request=apis[i].findRooms(price, persons, city, hotel);
-            System.out.println("Controller - "+apis[i]+Arrays.toString(request=apis[i].findRooms(price, persons, city, hotel)));
+           System.out.println("Controller - "+apis[i]+Arrays.toString(request=apis[i].findRooms(price, persons, city, hotel)));
 
         }
         return request;
@@ -37,22 +35,31 @@ public class Controller {
 
     public Room[] check(API a1, API a2) {
 
-        Room[] check = new Room[6];
+        Room[] check = new Room[5];
 
 
-        for (int i = 0; i <= apis.length - 1; i++) {
-            for (int j = 0; i <= check.length - 1; j++) {
+//        for (int i = 0; i <= apis.length - 1; i++) {
+//            for (int j = 0; i <= check.length - 1; j++) {
 
-                check = a1.findRooms(100, 5, "Ukraine", "Hayat");
-              
+                //check = a1.findRooms(100, 5, "Ukraine", "Hayat");
+                check= new GoogleAPI().getRooms();
+        System.out.println("111="+check[0]);
+        GoogleAPI a5 = new GoogleAPI();
+        a5.getRooms();
+        
 
-                System.out.println("Check= " + Arrays.toString(check));
-                System.out.println("dlina= " + check.length);
-                System.out.println("i= " + check[j] + "nom= " + j);
+        apis[0]=a1;
+        System.out.println("2221="+apis[0]);
+        System.out.println("a1= "+a1.equals(a2));
 
 
-            }
-        }
+//                System.out.println("Check= " + Arrays.toString(check));
+//                System.out.println("dlina= " + check.length);
+//                System.out.println("i= " + check[j] + "nom= " + j);
+
+
+        //    }
+  //      }
         return check;
     }
 
