@@ -46,10 +46,12 @@ public class Controller {
         System.out.println("111="+check[0]);
         GoogleAPI a5 = new GoogleAPI();
         a5.getRooms();
-        
+        //a1=()a2;
+        ((GoogleAPI) a2).getRooms();
+
 
         apis[0]=a1;
-        System.out.println("2221="+apis[0]);
+        System.out.println("2221="+((GoogleAPI) a2).getRooms());
         System.out.println("a1= "+a1.equals(a2));
 
 
