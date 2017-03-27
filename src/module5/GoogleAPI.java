@@ -17,7 +17,7 @@ class GoogleAPI implements API{
         Room room = new Room(111, 100, 5, new Date(02-03-2017), "Hayat2", "Ukraine" );
         Room room2 = new Room(222, 250, 5, new Date(02-02-2016), "Hayat", "Ukraine" );
         Room room3 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
-        Room room4 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
+        Room room4 = new Room(333, 200, 4, new Date(02-02-2016), "Hayat5", "Ukraine");
         Room room5 = new Room(222, 100, 5, new Date(02-02-2016), "Hayat", "Ukraine");
         rooms = new Room[]{room, room2, room3, room4, room5};
     }
