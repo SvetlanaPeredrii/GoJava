@@ -16,8 +16,8 @@ public class ArraysMain {
         ArraysUtils.multiplication(array);
         ArraysUtils.sum(array);
         ArraysUtils.secondLargest(array);
-        ArraysUtils.reverse(array);
-        ArraysUtils.findEvenElements(array);
+        System.out.println("reverse= "+Arrays.toString(ArraysUtils.reverse(array)));
+        System.out.println("EvenElements= "+Arrays.toString(ArraysUtils.findEvenElements(array)));
 
 
     }

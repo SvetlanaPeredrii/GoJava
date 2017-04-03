@@ -7,8 +7,10 @@ import java.util.Arrays;
  */
 public final class ArraysUtils {
 
+    private ArraysUtils() {
+    }
 
-   public static void sum(int array[]){
+    public static void sum(int array[]){
         int sum = 0;
 
         for (int i = 0; i < array.length; i++) {
@@ -109,24 +111,25 @@ public final class ArraysUtils {
            arrayReverse[i]=array[array.length-1-i];
        }
 
-       System.out.println("reverse"+ Arrays.toString(arrayReverse));
-
-        return arrayReverse;
+       return arrayReverse;
    }
 
   public static int[] findEvenElements(int[] array){
       int [] evenElements = new int[array.length];
+      int count =0;
       for (int i = 0; i < array.length; i++) {
 
 
           if ((array[i]%2)==0){
-              evenElements[i]= array[i];
-              System.out.println("EvenElements"+ evenElements[i]);
+              evenElements[count]= array[i];
+
+              System.out.println("EvenElements="+ evenElements[count]);
+              count++;
 
           }
 
       }
-      System.out.println("EvenElements"+ Arrays.toString(evenElements));
+
     return evenElements;
   }
 }

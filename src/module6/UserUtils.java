@@ -32,23 +32,23 @@ public class UserUtils {
         return usersWithContitionalBalance;
     }
 
-    User[]  paySalaryToUsers(User[] users){
-
-        User[] paySalaryToUsers = new User[users.length];
-        int i =0;
-
-        for (User user:users
-             ) {
-
-            int balance=paySalaryToUsers[i].getBalance()+paySalaryToUsers[i].getSalary();
-            paySalaryToUsers[i].getBalance()=balance;
-
-            i++;
-
-        }
-
-        return paySalaryToUsers;
-    }
+//    User[]  paySalaryToUsers(User[] users){
+//
+//        User[] paySalaryToUsers = new User[users.length];
+//        int i =0;
+//
+//        for (User user:users
+//             ) {
+//
+//            int balance=paySalaryToUsers[i].getBalance()+paySalaryToUsers[i].getSalary();
+//            paySalaryToUsers[i].getBalance()=balance;
+//
+//            i++;
+//
+//        }
+//
+//        return paySalaryToUsers;
+//    }
 //    long[] getUsersId(User[] users){
 //        long[] getUsersId;
 //        return getUsersId;

@@ -17,7 +17,7 @@ public class UsersMain {
 
         UserUtils a = new UserUtils();
         System.out.println(",,= "+ Arrays.toString(a.usersWithContitionalBalance(users,1500)));
-        System.out.println("salary= "+ Arrays.toString(a.paySalaryToUsers(users)));
+       // System.out.println("salary= "+ Arrays.toString(a.paySalaryToUsers(users)));
 
 
 
