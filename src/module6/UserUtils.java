@@ -8,34 +8,24 @@ public class UserUtils {
     User[] uniqueUsers(User[] users){
 
     User [] uniqueUsers = new User[users.length];
-        int i = 0;
 
-//        for (User user:users
-//             ) {
-//            if (user != null) {
-//                uniqueUsers[i] = user;
-//                i++;
-//            }
-//        }
-        for (User user1 : users
-                        ) {
-            if (user1 != null) {
-                for (User user2 : users
-                     ) {
-                    if (user2 != null) {
-
-                        if (user2.equals(user1)) {
-
-                            uniqueUsers[i] = user1;
-                            i++;
-
-                        }
+        int iterator = 0;
+        for (User user : users) {
+            boolean isContain = false;
+            if (user != null) {
+                for (User userNew : uniqueUsers) {
+                    if (userNew != null && userNew.equals(user)) {
+                        isContain = true;
                     }
+                }
+                if (!isContain) {
+                    uniqueUsers[iterator] = user;
+                    iterator++;
+                }
             }
         }
-        }
 
-        return uniqueUsers;
+        return deleteEmptyUsers(uniqueUsers);
     }
 
     User[] usersWithContitionalBalance(User[] users, int balance){
@@ -57,7 +47,7 @@ public class UserUtils {
         return usersWithContitionalBalance;
     }
 
-    User[]  paySalaryToUsers(User[] users){
+    static User[]  paySalaryToUsers(User[] users){
 
         User[] paySalaryToUsers = new User[users.length];
 
@@ -75,7 +65,7 @@ public class UserUtils {
 
         return paySalaryToUsers;
     }
-    long[] getUsersId(User[] users){
+    static long[] getUsersId(User[] users){
         long[] getUsersId = new long[users.length];
         int i = 0;
         for (User user:users
