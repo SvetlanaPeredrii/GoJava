@@ -47,7 +47,7 @@ public class UserUtils {
         return usersWithContitionalBalance;
     }
 
-    static User[]  paySalaryToUsers(User[] users){
+    static final User[]  paySalaryToUsers(User[] users){
 
         User[] paySalaryToUsers = new User[users.length];
 
@@ -65,7 +65,7 @@ public class UserUtils {
 
         return paySalaryToUsers;
     }
-    static long[] getUsersId(User[] users){
+    static final long[] getUsersId(User[] users){
         long[] getUsersId = new long[users.length];
         int i = 0;
         for (User user:users
