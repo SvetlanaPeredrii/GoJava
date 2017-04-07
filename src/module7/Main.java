@@ -24,6 +24,7 @@ public class Main {
         User user8 = new User(888, "Saulyk", "Vadim", "Kiev", 6767);
         User user9 = new User(999, "Komarov", "Evguen", "Kiev", 40);
         User user10 = new User(1010, "Petrosyan", "Yulya", "Lvov", 12345);
+
         List<User> users = new ArrayList<>();
         Collections.addAll(users, user1, user2, user3,user4,user5,user6,user7,user8,user9,user10);
 
@@ -38,9 +39,14 @@ public class Main {
         Order order9 = new Order(169, 250, Currency.UAH, "Wine", "Silpo", user10 );
         Order order10 = new Order(170, 90, Currency.USD, "Umbrella", "Vsi svoi", user9 );
 
+        List<Order> orders = new ArrayList<>();
+        Collections.addAll(orders, order1, order2, order3, order4, order5, order6, order7, order8, order9, order10);
+
 
         System.out.println("111="+users.get(9));
-        System.out.println("111="+users.contains(user1));
+        System.out.println("111="+users.get(9));
+        System.out.println("111="+users.contains(user2));
+        System.out.println("111="+orders.get(9));
 
 
 
