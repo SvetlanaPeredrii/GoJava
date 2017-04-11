@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  * Created by kaganets.s on 06.04.2017.
  */
-public class Order {
+public class Order implements Comparable<Order>{
 
     private long id;
     private int price;
@@ -50,6 +50,11 @@ public class Order {
     }
 
     @Override
+    public int compareTo(Order o) {
+        return -((Integer)getPrice()).compareTo(o.getPrice());
+    }
+
+    @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
@@ -61,10 +66,5 @@ public class Order {
                 '}';
     }
 
-//    class PersonComparator implements Comparator<Order> {
-//
-//        public int compare(Order o1, Order o2) {
-//            return o1.getId().compareTo(o2.getId());
-//        }
-//    }
+
 }
