@@ -2,11 +2,7 @@ package module7;
 
 import Module4.Task4_1.Currency;
 
-import java.util.ArrayList;
-
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by kaganets.s on 06.04.2017.
@@ -21,7 +17,7 @@ public class Main {
         User user2 = new User(222, "But", "Misha", "Rovno", 300);
         User user3 = new User(333, "Reva", "Andrew", "Harkov", 2456);
         User user4 = new User(444, "Ivanov", "Kolya", "Paris", 9800);
-        User user5 = new User(555, "Petrova", "Katya", "Paris", 0);
+        User user5 = new User(555, "Petrov", "Pasha", "Paris", 0);
         User user6 = new User(666, "Kvashyna", "Valya", "Sumy", 2456);
         User user7 = new User(777, "Rybkina", "Olga", "New York", 200000);
         User user8 = new User(888, "Saulyk", "Vadim", "Kiev", 6767);
@@ -33,7 +29,7 @@ public class Main {
 
         Order order1 = new Order(153, 15, Currency.USD, "Pen", "Kanctovary", user4);
         Order order2 = new Order(160, 100, Currency.UAH, "Perfume", "Brocard", user3);
-        Order order3 = new Order(154, 2, Currency.EUR, "Oil", "Market", user1);
+        Order order3 = new Order(155, 2, Currency.USD, "Oil", "Milk", user5);
         Order order4 = new Order(165, 150, Currency.USD, "Skirt", "Oggi", user8);
         Order order5 = new Order(159, 500, Currency.EUR, "IPhone", "Apple", user6);
         Order order6 = new Order(161, 150, Currency.UAH, "Protector", "Apple", user7);
@@ -68,7 +64,7 @@ public class Main {
                 if (res != 0) {
                     return res;
                 }
-                int res2 = ((Long)o1.getId()).compareTo(o2.getId());
+                int res2 = ((Long) o1.getId()).compareTo(o2.getId());
                 if (res2 != 0) {
                     return res2;
                 }
@@ -80,6 +76,16 @@ public class Main {
 
         });
         System.out.println("Name and identifier ascending and usercity= " + orders);
+
+        Set<Order> orderSet = new TreeSet<>();
+
+        Collections.addAll(orderSet, order1, order2, order3, order4, order5, order6, order7, order8, order9, order10);
+        System.out.println(orderSet);
+
+        for(Order  p : orderSet){
+
+            System.out.println(p.getId() + " " + p.getUser());
+        }
 
 
     }
