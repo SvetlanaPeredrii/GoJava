@@ -30,9 +30,9 @@ public class Main {
         Order order1 = new Order(153, 15, Currency.USD, "Pen", "Kanctovary", user4);
         Order order2 = new Order(160, 100, Currency.UAH, "Perfume", "Brocard", user3);
         Order order3 = new Order(155, 2, Currency.USD, "Oil", "Milk", user5);
-        Order order4 = new Order(165, 150, Currency.USD, "Skirt", "Oggi", user8);
+        Order order4 = new Order(165, 123, Currency.USD, "Skirt", "Oggi", user8);
         Order order5 = new Order(159, 500, Currency.EUR, "IPhone", "Apple", user6);
-        Order order6 = new Order(161, 150, Currency.UAH, "Protector", "Apple", user7);
+        Order order6 = new Order(161, 150, Currency.UAH, "Protector", "Samsung", user7);
         Order order7 = new Order(162, 10, Currency.EUR, "Pencil", "Kanctovary", user2);
         Order order8 = new Order(155, 2, Currency.USD, "Oil", "Milk", user5);
         Order order9 = new Order(169, 250, Currency.UAH, "Wine", "Silpo", user10);
@@ -77,18 +77,36 @@ public class Main {
         });
         System.out.println("Name and identifier ascending and usercity= " + orders);
 
+
         Set<Order> orderSet = new TreeSet<>();
+
 
         Collections.addAll(orderSet, order1, order2, order3, order4, order5, order6, order7, order8, order9, order10);
         System.out.println(orderSet);
 
-        for(Order  p : orderSet){
+        for (Order p : orderSet) {
+            if (p.getUser().getFirstName() == "Petrov") {
 
-            System.out.println(p.getId() + " " + p.getUser());
+                System.out.println("Finding Petrov= " + p);
+            }
         }
 
 
+        Iterator<Order> its = orderSet.iterator();
+        while (its.hasNext()&& orderSet[its]==Currency.USD)) {
+           // if (its.hasNext() && value.getCurrency() == Currency.USD)
+
+          //  {
+
+               its.next();
+
+                its.remove();
+                System.out.println(orderSet);
+
+           // }
+
+            System.out.println(orderSet);
+        }
+
     }
-
-
 }
