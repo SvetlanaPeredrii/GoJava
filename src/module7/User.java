@@ -5,7 +5,7 @@ package module7;
  */
 public class User {
 
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String city;
@@ -38,6 +38,7 @@ public class User {
     public int getBalance() {
         return balance;
     }
+
 
     @Override
     public String toString() {

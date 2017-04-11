@@ -5,6 +5,7 @@ import Module4.Task4_1.Currency;
 import java.util.ArrayList;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -12,7 +13,9 @@ import java.util.List;
  */
 public class Main {
 
+
     public static void main(String[] args) {
+
 
         User user1 = new User(111, "Bogdanova", "Ira", "Kiev", 1450);
         User user2 = new User(222, "But", "Misha", "Rovno", 300);
@@ -48,6 +51,15 @@ public class Main {
         System.out.println("111="+users.contains(user2));
         System.out.println("111="+orders.get(9));
 
+        Collections.sort(orders, new Comparator<Order>() {
+            public int compare(Order o1, Order o2) {
+
+
+
+                return o1.Long.parselong(getId()).compareTo(o2.getId());
+            }
+        });
+        System.out.println(orders);
 
 
     }
