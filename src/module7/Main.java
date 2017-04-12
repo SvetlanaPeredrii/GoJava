@@ -78,7 +78,7 @@ public class Main {
         System.out.println("Name and identifier ascending and usercity= " + orders);
 
 
-        Set<Order> orderSet = new TreeSet<>();
+        TreeSet<Order> orderSet = new TreeSet<>();
 
 
         Collections.addAll(orderSet, order1, order2, order3, order4, order5, order6, order7, order8, order9, order10);
@@ -91,22 +91,23 @@ public class Main {
             }
         }
 
+        // так как compareTo у меня сортирует по убыванию, поэтому использую first() для поиска наибольшей цены.
+
+        System.out.println("Order with the highest price= " + orderSet.first());
+
 
         Iterator<Order> its = orderSet.iterator();
-        while (its.hasNext()&& orderSet[its]==Currency.USD)) {
-           // if (its.hasNext() && value.getCurrency() == Currency.USD)
 
-          //  {
+        while (its.hasNext()) {
 
-               its.next();
+            if (its.next().getCurrency() == Currency.USD) {
+
 
                 its.remove();
-                System.out.println(orderSet);
 
-           // }
+            }
 
-            System.out.println(orderSet);
         }
-
+        System.out.println("Orders without $= " + orderSet);
     }
 }
