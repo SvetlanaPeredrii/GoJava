@@ -11,8 +11,6 @@ public class IntegerLinkedList10000 {
 
     public void integerLinkedList10000() {
 
-        System.out.println("// integerLinkedList10000 ");
-
         long startTime = System.currentTimeMillis();
         System.out.println("StartTime= " + startTime);
 

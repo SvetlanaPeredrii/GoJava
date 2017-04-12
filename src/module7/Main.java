@@ -117,29 +117,40 @@ public class Main {
 
         //IntegerArrayList
 
+        System.out.println("//////************  integerArrayList1000 ******************//////////////////");
         IntegerArrayList1000 integer1000 = new IntegerArrayList1000();
         integer1000.integerArrayList1000();
+
+        System.out.println("//////************  integerArrayList10000 ******************//////////////////");
         IntegerArrayList10000 integer10000 = new IntegerArrayList10000();
         integer10000.integerArrayList10000();
 
         // StringArrayList
 
+        System.out.println("//////************  stringArrayList1000 ******************//////////////////");
         StringArrayList1000 string1000 = new StringArrayList1000();
         string1000.stringArrayList1000();
+
+        System.out.println("//////************  stringArrayList10000 ******************//////////////////");
         StringArrayList10000 string10000 = new StringArrayList10000();
         string10000.stringArrayList10000();
 
         //IntegerLinkedList
-
+        System.out.println("//////************  integerLinkedList1000 ******************//////////////////");
         IntegerLinkedList1000 integerLinkedList1000 = new IntegerLinkedList1000();
         integerLinkedList1000.integerLinkedList1000();
+
+        System.out.println("//////************  integerLinkedList10000 ******************//////////////////");
         IntegerLinkedList10000 integerLinkedList10000 = new IntegerLinkedList10000();
         integerLinkedList10000.integerLinkedList10000();
 
         //StringLinkedList
 
+        System.out.println("//////************  stringLinkedList1000 ******************//////////////////");
         StringLinkedList1000 stringLinkedList1000 = new StringLinkedList1000();
         stringLinkedList1000.stringLinkedList1000();
+
+        System.out.println("//////************  stringLinkedList10000 ******************//////////////////");
         StringLinkedList10000 stringLinkedList10000 = new StringLinkedList10000();
         stringLinkedList10000.stringLinkedList10000();
 

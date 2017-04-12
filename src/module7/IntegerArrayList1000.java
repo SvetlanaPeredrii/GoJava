@@ -12,6 +12,7 @@ public class IntegerArrayList1000 {
 
     public void integerArrayList1000() {
 
+
         long startTime = System.currentTimeMillis();
         System.out.println("StartTime= " + startTime);
 

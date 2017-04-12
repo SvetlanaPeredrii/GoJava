@@ -10,6 +10,7 @@ public class StringLinkedList10000 {
 
     public void stringLinkedList10000() {
 
+
         long startTime = System.currentTimeMillis();
         System.out.println("StartTime= " + startTime);
 
