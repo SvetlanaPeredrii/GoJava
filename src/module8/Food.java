@@ -6,12 +6,12 @@ import java.util.Date;
  * Created by kaganets.s on 13.04.2017.
  */
 public class Food {
-    private int id;
+    private  final long id = 0;
     private String name;
     private String country;
     private Date expiration;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -39,6 +39,6 @@ public class Food {
 
     @Override
     public int hashCode() {
-        return id;
+        return (int) (id ^ (id >>> 32));
     }
 }
