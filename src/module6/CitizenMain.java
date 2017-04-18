@@ -6,11 +6,17 @@ package module6;
 public class CitizenMain {
     public static void main(String[] args) {
 
-        CitizenFactory x = new CitizenFactory();
-        x.createCitizen("Englishman").sayHello();
-        x.createCitizen("Chinese").sayHello();
-        x.createCitizen("Russian").sayHello();
-        x.createCitizen("Italian").sayHello();
+       
+        Citizen englishman = CitizenFactory.createEnglishman();
+        englishman.sayHello();
+        Citizen chinese = CitizenFactory.createChinese();
+        chinese.sayHello();
+        Citizen russian = CitizenFactory.createRussian();
+        russian.sayHello();
+        Citizen italian = CitizenFactory.createItalian();
+        italian.sayHello();
+
+
 
 
     }

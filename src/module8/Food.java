@@ -6,12 +6,20 @@ import java.util.Date;
  * Created by kaganets.s on 13.04.2017.
  */
 public class Food {
-    private  final long id = 0;
+    private  final long id;
     private String name;
     private String country;
     private Date expiration;
 
+    public Food(String name, String country, Date expiration, long id) {
+        this.id=id;
+        this.name = name;
+        this.country = country;
+        this.expiration = expiration;
+    }
+
     public long getId() {
+
         return id;
     }
 

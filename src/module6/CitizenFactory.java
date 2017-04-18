@@ -5,30 +5,41 @@ package module6;
  */
 public class CitizenFactory {
 
-    public Citizen createCitizen(String citizen) {
-        if (citizen.equals("Englishman")) {
-            return new Englishman();
-        } else if (citizen.equals("Chinese")) {
-            return new Chinese();
-        } else if (citizen.equals("Russian")) {
-            return new Russian();
-        } else if (citizen.equals("Italian")) {
-            return new Italian();
 
-        }return null;
+    public static Citizen createEnglishman() {
+
+
+        return new Englishman();
     }
 
-    public static final class Englishman implements Citizen {
+    public static Citizen createChinese() {
+
+
+        return new Chinese();
+    }
+
+    public static Citizen createRussian() {
+
+
+        return new Russian();
+    }
+
+    public static Citizen createItalian() {
+
+
+        return new Italian();
+    }
+
+    private static final class Englishman implements Citizen {
 
         @Override
         public void sayHello() {
 
             System.out.println("Hello");
         }
-
-
     }
-    public static final class Chinese implements Citizen{
+
+    private static final class Chinese implements Citizen {
 
         @Override
         public void sayHello() {
@@ -36,7 +47,8 @@ public class CitizenFactory {
 
         }
     }
-    public static final class Russian implements Citizen{
+
+    private static final class Russian implements Citizen {
 
         @Override
         public void sayHello() {
@@ -44,7 +56,8 @@ public class CitizenFactory {
 
         }
     }
-    public static final class Italian implements Citizen{
+
+    private static final class Italian implements Citizen {
 
         @Override
         public void sayHello() {
