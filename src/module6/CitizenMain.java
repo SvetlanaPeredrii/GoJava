@@ -6,7 +6,7 @@ package module6;
 public class CitizenMain {
     public static void main(String[] args) {
 
-       
+
         Citizen englishman = CitizenFactory.createEnglishman();
         englishman.sayHello();
         Citizen chinese = CitizenFactory.createChinese();

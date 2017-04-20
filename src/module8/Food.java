@@ -1,6 +1,6 @@
 package module8;
 
-import java.util.Date;
+
 
 /**
  * Created by kaganets.s on 13.04.2017.
@@ -8,11 +8,11 @@ import java.util.Date;
 public class Food {
     private  final long id;
     private String name;
-    private String country;
-    private Date expiration;
+    private Country country;
+    private int expiration;
 
-    public Food(String name, String country, Date expiration, long id) {
-        this.id=id;
+    public Food(String name, Country country, int expiration) {
+        this.id=IdGenerator.generateId();
         this.name = name;
         this.country = country;
         this.expiration = expiration;
@@ -27,12 +27,22 @@ public class Food {
         return name;
     }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public Date getExpiration() {
+    public int getExpiration() {
         return expiration;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", expiration=" + expiration +
+                '}';
     }
 
     @Override
