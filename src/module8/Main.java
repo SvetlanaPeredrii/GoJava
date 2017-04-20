@@ -15,7 +15,7 @@ public class Main {
         Food food5 = new Food("Potato", Country.POLAND, 90);
         Food food6 = new Food("Oil", Country.ITALY, 365);
         Food food7 = new Food("Salo", Country.UKRAINE, 30);
-       
+
 
         IManageSystem im = new IManageSystemImpl();
 
@@ -26,13 +26,14 @@ public class Main {
         im.save(food5);
         im.save(food6);
         im.save(food7);
+        System.out.println("Database= " + im);
         System.out.println("Get products=" + im.getProducts());
         System.out.println("Get prices=" + im.getPrices());
         im.delete(food7);
         im.deleteById(4);
         System.out.println("Find id= " + im.get(1));
         System.out.println("Get price= " + im.getPrice(food3));
-        System.out.println("im= " + im);
+        System.out.println("Database after changes= " + im);
     }
 }
 
