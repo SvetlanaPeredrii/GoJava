@@ -1,4 +1,4 @@
-package module10;
+package module10.task1;
 
 /**
  * Created by kaganets.s on 11.05.2017.
