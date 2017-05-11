@@ -86,7 +86,7 @@ public class Main {
         as.addnumber(num.createNumber());
         as.addnumber(num.createNumber());
         as.addnumber(num.createNumber());
-        as.
+
 
 
     }
