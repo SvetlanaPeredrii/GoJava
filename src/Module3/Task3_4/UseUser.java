@@ -14,7 +14,7 @@ public class UseUser {
         System.out.println("Balance after withdraw = " + user1.withdraw(4999));
 
         user1.companyNameLenght();
-        
+
         System.out.println("monthIncreaser = " + user1.monthIncreaser(4));
 
 
