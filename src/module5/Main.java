@@ -40,7 +40,7 @@ public class Main {
 
         Controller controller = new Controller();
 
-      controller.requstRooms(100,10,"Ukraine","Hayat");
+      controller.requstRooms(100,5,"Ukraine","Hayat");
         System.out.println("Check= "+Arrays.toString(controller.check(new TripAdvisorAPI(),new GoogleAPI())));
         System.out.println("Check= "+Arrays.toString(controller.check(new BookingComAPI(),new GoogleAPI())));
         System.out.println("Check= "+Arrays.toString(controller.check(new TripAdvisorAPI(),new BookingComAPI())));
