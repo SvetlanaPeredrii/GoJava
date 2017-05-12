@@ -8,13 +8,14 @@ public class UseUser {
 
 
         User user1 = new User("Petya", 5000, 6, "Apple", 2000, "$");
+
         user1.paySalary();
 
-        System.out.println("Balance = " + user1.withdraw(1001));
+        System.out.println("Balance after withdraw = " + user1.withdraw(4999));
+
         user1.companyNameLenght();
+        
         System.out.println("monthIncreaser = " + user1.monthIncreaser(4));
-
-
 
 
     }

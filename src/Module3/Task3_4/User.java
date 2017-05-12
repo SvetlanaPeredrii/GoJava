@@ -11,7 +11,7 @@ public class User {
     private int salary;
     private String currency;
 
-    User (String name, int balance,int monthsOfEmployment, String companyName, int salary, String currency) {
+    User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
         this.name = name;
         this.balance = balance;
         this.monthsOfEmployment = monthsOfEmployment;
@@ -69,26 +69,32 @@ public class User {
         this.currency = currency;
     }
 
-    public void paySalary(){
+    public void paySalary() {
 
-        System.out.println("salary+balance = " + (salary+balance));
+        balance += salary;
+
+        System.out.println("Balance after get salary= " + balance);
     }
 
     double withdraw(int summ) {
-        if (summ<1000){
-            balance -= summ*1.05;
-        }
-        else balance -= summ*1.1;
+        if (summ < 1000 && summ*1.05 <= balance) {
+            balance -= summ * 1.05;
 
-     return balance;
+        } else if (summ*1.1 <= balance) {
+            balance -= summ * 1.1;
+        }
+        else System.out.println("Sum more than balance");
+
+        return balance;
     }
-    void companyNameLenght(){
+
+    void companyNameLenght() {
 
         int lenght = companyName.length();
         System.out.println("companyNameLenght = " + lenght);
     }
 
-    int monthIncreaser(int addMonth){
+    int monthIncreaser(int addMonth) {
 
         return monthsOfEmployment += addMonth;
     }
