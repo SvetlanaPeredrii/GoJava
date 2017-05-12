@@ -8,24 +8,23 @@ public class CollegeStudent extends Student {
     private int rating;
     private long id;
 
-    CollegeStudent(){
 
-    }
-
-    CollegeStudent (String firstName, String lastName, int group){
+    CollegeStudent(String firstName, String lastName, int group) {
         super(firstName, lastName, group);
     }
 
-    CollegeStudent(String lastName, Course [] coursesTaken){
+    CollegeStudent(String lastName, Course[] coursesTaken) {
         super(lastName, coursesTaken);
     }
 
-    CollegeStudent (String collegeName, int rating, long id){
+    CollegeStudent(String collegeName, int rating, long id) {
+        super("noName", "noName", 0);
         this.collegeName = collegeName;
         this.rating = rating;
         this.id = id;
 
     }
+
 
     public String getCollegeName() {
         return "collegeName = " + collegeName;
