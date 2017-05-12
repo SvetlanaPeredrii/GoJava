@@ -33,23 +33,25 @@ class BookingComAPI implements API {
 
     @Override
     public String toString() {
-        return "BookingComAPI= " ;
+        return "BookingComAPI= ";
     }
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        Room [] array = new Room[rooms.length];
-
+        Room[] array = new Room[rooms.length];
+        int count = 0;
 
         for (int i = 0; i <= rooms.length - 1; i++) {
             if (price == rooms[i].getPrice() && persons == rooms[i].getPersons() && city == rooms[i].getCityName() && hotel == rooms[i].getHotelName()) {
 
-                array[i]=rooms[i];
+
+                array[count] = rooms[i];
+                count++;
 
             }
 
         }
-        //System.out.println("BookingComAPI = "+Arrays.toString(array));
+
         return array;
     }
 }
