@@ -22,21 +22,22 @@ public class Controller {
 
     public Room[] requstRooms(int price, int persons, String city, String hotel) {
 
-        Room[] request = new Room[apis[0].findRooms(price, persons, city, hotel).length
-                + apis[1].findRooms(price, persons, city, hotel).length
-                + apis[2].findRooms(price, persons, city, hotel).length];
+        int a = apis[0].findRooms(price, persons, city, hotel).length;
+        int b = apis[1].findRooms(price, persons, city, hotel).length;
+        int c = apis[2].findRooms(price, persons, city, hotel).length;
+
+        Room[] request = new Room[a + b + c];
 
 
-        // for (int i = 0; i <= apis.length - 1; i++) {
+        System.arraycopy(apis[0].findRooms(price, persons, city, hotel), 0, request, 0, a);
+        System.arraycopy(apis[1].findRooms(price, persons, city, hotel), 0, request, a, b);
+        System.arraycopy(apis[2].findRooms(price, persons, city, hotel), 0, request, a + b, c);
 
 
-        System.arraycopy(apis[0].findRooms(price, persons, city, hotel), 0, request, 0, apis[0].findRooms(price, persons, city, hotel).length);
-        System.arraycopy(apis[1].findRooms(price, persons, city, hotel), 0, request, apis[0].findRooms(price, persons, city, hotel).length, apis[1].findRooms(price, persons, city, hotel).length);
-        System.arraycopy(apis[2].findRooms(price, persons, city, hotel), 0, request, apis[0].findRooms(price, persons, city, hotel).length+apis[1].findRooms(price, persons, city, hotel).length, apis[2].findRooms(price, persons, city, hotel).length);
-
-        //System.out.println("Controller - "+apis[i]+Arrays.toString(request=apis[i].findRooms(price, persons, city, hotel)));
-
-        System.out.println("Controller request = " + Arrays.toString(request));
+        for (int i = 0; i <= request.length - 1; i++)
+            if (request[i] != null) {
+                System.out.println("Controller request = " + request[i]);
+            }
         return request;
 
     }
