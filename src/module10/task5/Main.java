@@ -10,7 +10,7 @@ public class Main {
         MyClass myClass = new MyClass();
 
         try {
-            myClass.someMethod(-6);
+            myClass.someMethod(1);
         } catch (Exception e) {
             e.printStackTrace();
         }
