@@ -6,15 +6,14 @@ package module10.task5;
 public class MyClass {
 
     public void someMethod(int i) throws MyException1, MyException2, MyException3 {
-try {
-    if (i < 0) throw new MyException1();
-    if (i == 0) throw new MyException2();
-    if (i > 0) throw new MyException3();
-}
-catch(MyException1 | MyException2 | MyException3 ex) {
-    throw ex;
+        try {
+            if (i < 0) throw new MyException1();
+            if (i == 0) throw new MyException2();
+            if (i > 0) throw new MyException3();
+        } catch (MyException1 | MyException2 | MyException3 ex) {
+            throw ex;
 
-}
+        }
 
     }
 }
