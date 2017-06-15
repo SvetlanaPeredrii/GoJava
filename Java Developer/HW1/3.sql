@@ -1,0 +1,1 @@
+SELECT sum(salary) FROM project_development_db.developers;
